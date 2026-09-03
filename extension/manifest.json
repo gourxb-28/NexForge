@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "NexForge",
+  "version": "1.0",
+  "description": "Convert AI conversations into portable context packages.",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "NexForge"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
+}
