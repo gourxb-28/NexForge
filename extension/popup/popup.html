@@ -17,10 +17,41 @@
       <p id="platform-status">Ready to extract context.</p>
     </div>
     
+    <div style="margin-bottom: 12px;">
+      <label for="compression-mode" style="font-size: 12px; font-weight: bold; color: #4b5563;">Compression Mode:</label>
+      <select id="compression-mode" style="width: 100%; padding: 6px; margin-top: 4px; border-radius: 4px; border: 1px solid #d1d5db; font-size: 12px;">
+        <option value="compact">Compact (Strict context limits)</option>
+        <option value="balanced" selected>Balanced (Default)</option>
+        <option value="detailed">Detailed (Includes more history)</option>
+        <option value="maximum">Maximum Context (Full extraction)</option>
+      </select>
+    </div>
+
     <button id="generate-btn" class="primary-btn">Generate Context</button>
+    
+    <div id="preview-container" style="display: none; margin-top: 16px;">
+      <p style="font-size: 12px; font-weight: bold; margin-bottom: 4px; display: flex; justify-content: space-between;">
+        <span>Generated Context:</span>
+        <span id="word-count" style="font-weight: normal; color: #6b7280;">0 words</span>
+      </p>
+      <textarea id="context-preview" style="width: 100%; height: 150px; font-size: 11px; padding: 6px; box-sizing: border-box; border-radius: 4px; border: 1px solid #d1d5db; resize: vertical;"></textarea>
+      
+      <!-- Phase 8: Export Actions -->
+      <div class="actions-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
+        <button id="copy-btn" class="secondary-btn">Copy Prompt</button>
+        <button id="dl-md-btn" class="secondary-btn">Download .md</button>
+        <button id="dl-json-btn" class="secondary-btn">Download .json</button>
+        <button id="dl-txt-btn" class="secondary-btn">Download .txt</button>
+      </div>
+      <p id="action-status" style="font-size: 11px; color: #059669; text-align: center; margin-top: 8px; height: 14px;"></p>
+    </div>
   </div>
 
   <script src="../services/normalizer.js"></script>
+  <script src="../services/contextGenerator.js"></script>
+  <script src="../services/compressor.js"></script>
+  <script src="../services/packageBuilder.js"></script>
+  <script src="../services/exporter.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

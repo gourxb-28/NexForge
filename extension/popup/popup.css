@@ -60,3 +60,23 @@ body {
 .primary-btn:active {
   background-color: #3730a3;
 }
+
+.secondary-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.secondary-btn:active {
+  background-color: #d1d5db;
+}
